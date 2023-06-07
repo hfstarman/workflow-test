@@ -20,5 +20,5 @@ jobs:
                 
                 echo "COMMIT MESSAGE"
                 msg=$GITHUB_COMMIT_MSG
-                echo $MSG
+                echo $msg
                 echo $GITHUB_COMMIT_MSG
