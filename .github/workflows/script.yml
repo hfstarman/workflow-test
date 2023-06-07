@@ -1,0 +1,24 @@
+name: Script testing
+
+on:
+    push:
+    pull_request:
+
+env:
+    GITHUB_TITLE: ${{ github.event.pull_request.title }}
+    GITHUB_COMMIT_MSG: ${{ github.event.head_commit.message }}
+
+jobs:
+    scirpt:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "TITLE"
+                title=$GITHUB_TITLE
+                echo $title
+                echo $GITHUB_TITLE
+                
+                echo "COMMIT MESSAGE"
+                msg=$GITHUB_COMMIT_MSG
+                echo $MSG
+                echo $GITHUB_COMMIT_MSG
