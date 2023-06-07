@@ -11,8 +11,13 @@ env:
 jobs:
     scirpt:
         runs-on: ubuntu-latest
+        env:
+            CHERRIES: cherries
         steps:
-            - run: |
+            - name: echo
+              env:
+                BERRIES: berries
+              run: |
                 echo "TITLE"
                 title=$GITHUB_TITLE
                 echo $title
